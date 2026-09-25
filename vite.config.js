@@ -1,13 +1,15 @@
 import { copyFileSync, readFileSync, writeFileSync } from 'node:fs'
+import { join } from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 const pages = process.env.GITHUB_PAGES === 'true'
+let outDir = 'dist'
 
 export default defineConfig({
-  // Pages lives at /shahiarusha/. A local build uses a single classic
-  // script with relative paths so opening dist/index.html can run it.
-  base: pages ? '/shahiarusha/' : './',
+  // arusha.com.np is the site root, so Pages assets must be /assets/….
+  // A local build uses relative paths so opening dist/index.html can run it.
+  base: pages ? '/' : './',
   build: pages
     ? undefined
     : {
@@ -26,6 +28,9 @@ export default defineConfig({
     {
       name: 'dist-html',
       apply: 'build',
+      configResolved(config) {
+        outDir = config.build.outDir
+      },
       transformIndexHtml: {
         order: 'post',
         handler(html) {
@@ -43,20 +48,20 @@ export default defineConfig({
         },
       },
       closeBundle() {
-        const file = 'dist/index.html'
+        const file = join(outDir, 'index.html')
         if (!pages) {
           let html = readFileSync(file, 'utf8')
           const cssName = html.match(/href="\.\/assets\/([^"]+\.css)"/)?.[1]
           const jsName = html.match(/src="\.\/assets\/([^"]+\.js)"/)?.[1]
           if (cssName) {
-            const css = readFileSync(`dist/assets/${cssName}`, 'utf8')
+            const css = readFileSync(join(outDir, 'assets', cssName), 'utf8')
             html = html.replace(
               /<link rel="stylesheet" href="\.\/assets\/[^"]+\.css">/,
               () => `<style>${css}</style>`,
             )
           }
           if (jsName) {
-            const js = readFileSync(`dist/assets/${jsName}`, 'utf8').replaceAll('</script', '<\\/script')
+            const js = readFileSync(join(outDir, 'assets', jsName), 'utf8').replaceAll('</script', '<\\/script')
             html = html.replace(
               /<script src="\.\/assets\/[^"]+\.js"><\/script>/,
               () => `<script>${js}</script>`,
@@ -64,7 +69,7 @@ export default defineConfig({
           }
           writeFileSync(file, html)
         }
-        copyFileSync(file, 'dist/404.html')
+        copyFileSync(file, join(outDir, '404.html'))
       },
     },
   ],
