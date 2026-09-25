@@ -18,7 +18,7 @@ export const experiments = [
   {
     id: 3,
     slug: 'xor-by-hand',
-    title: 'Teaching a tiny network XOR.',
+    title: 'Teaching a tiny network XOR by hand.',
     date: '2017-11-20',
     type: 'neural networks',
     status: 'WORKS',
