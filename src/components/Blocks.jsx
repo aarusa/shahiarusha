@@ -1,3 +1,6 @@
+const publicSrc = (src) =>
+  src?.startsWith('/') ? `${import.meta.env.BASE_URL}${src.slice(1)}` : src
+
 export default function Blocks({ blocks = [] }) {
   return blocks.map((b, i) => {
     switch (b.type) {
@@ -23,7 +26,7 @@ export default function Blocks({ blocks = [] }) {
       case 'screenshot':
         return (
           <figure key={i} className={b.type === 'screenshot' ? 'blocks__figure blocks__shot' : 'blocks__figure'}>
-            <img src={b.src} alt={b.alt ?? ''} width={b.width ?? 960} height={b.height ?? 540} />
+            <img src={publicSrc(b.src)} alt={b.alt ?? ''} width={b.width ?? 960} height={b.height ?? 540} />
             {b.caption && <figcaption className="mono">{b.caption}</figcaption>}
           </figure>
         )
