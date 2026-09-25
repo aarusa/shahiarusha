@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <rect width="960" height="540" fill="#f4f4f1"/>
+  <rect x="48" y="36" width="864" height="468" fill="#16181d"/>
+  <rect x="48" y="36" width="864" height="36" fill="#22252c"/>
+  <circle cx="72" cy="54" r="5" fill="#1f3cff"/>
+  <text x="88" y="59" fill="#9a9a96" font-family="ui-monospace, monospace" font-size="13">python - pricy.py</text>
+  <text x="72" y="110" fill="#9a9a96" font-family="ui-monospace, monospace" font-size="16">$ python pricy.py</text>
+  <text x="72" y="148" fill="#1f3cff" font-family="ui-monospace, monospace" font-size="16">&gt;&gt;&gt; hello</text>
+  <text x="72" y="186" fill="#e6e6e1" font-family="ui-monospace, monospace" font-size="16">hi! what are you looking for today?</text>
+  <text x="72" y="224" fill="#1f3cff" font-family="ui-monospace, monospace" font-size="16">&gt;&gt;&gt; cheapest headphones under $100</text>
+  <text x="72" y="262" fill="#e6e6e1" font-family="ui-monospace, monospace" font-size="16">searching 3 websites...</text>
+  <text x="72" y="300" fill="#e6e6e1" font-family="ui-monospace, monospace" font-size="16">sorry, I didn't get that.</text>
+  <text x="72" y="338" fill="#1f3cff" font-family="ui-monospace, monospace" font-size="16">&gt;&gt;&gt; _</text>
+</svg>

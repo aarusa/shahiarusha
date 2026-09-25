@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520">
+  <rect width="960" height="520" fill="#f7f7f5"/>
+  <rect x="40" y="28" width="880" height="464" fill="#ffffff" stroke="#e4e4e0"/>
+  <rect x="40" y="28" width="880" height="40" fill="#fafaf8" stroke="#e4e4e0"/>
+  <text x="60" y="53" fill="#8a8a86" font-family="ui-monospace, monospace" font-size="13">doTheThing.js - 2019</text>
+  <text x="64" y="112" fill="#c8c8c4" font-family="ui-monospace, monospace" font-size="15">1</text>
+  <text x="96" y="112" fill="#111" font-family="ui-monospace, monospace" font-size="15">function doTheThing(data, data2, flag, otherFlag) {</text>
+  <text x="64" y="148" fill="#c8c8c4" font-family="ui-monospace, monospace" font-size="15">2</text>
+  <text x="96" y="148" fill="#8a8a86" font-family="ui-monospace, monospace" font-size="15">  // TODO: fix this properly</text>
+  <text x="64" y="184" fill="#c8c8c4" font-family="ui-monospace, monospace" font-size="15">3</text>
+  <text x="96" y="184" fill="#8a8a86" font-family="ui-monospace, monospace" font-size="15">  // (it was never fixed properly)</text>
+  <text x="64" y="220" fill="#c8c8c4" font-family="ui-monospace, monospace" font-size="15">4</text>
+  <text x="96" y="220" fill="#111" font-family="ui-monospace, monospace" font-size="15">}</text>
+  <rect x="64" y="280" width="220" height="28" fill="#d6ff4a"/>
+  <text x="76" y="299" fill="#111" font-family="ui-sans-serif, sans-serif" font-size="13">used every day for 2 years</text>
+</svg>
