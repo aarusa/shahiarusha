@@ -1,4 +1,4 @@
-name: Arusha Shahi
+name: Deploy React Portfolio to GitHub Pages
 
 on:
   push:
