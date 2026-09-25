@@ -751,7 +751,7 @@
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--gap);
   align-items: end;
-  margin-bottom: var(--space-xl);
+  margin-bottom: clamp(8rem, 20vh, 14rem);
 }
 
 .feat__visual { display: block; position: relative; }
@@ -863,8 +863,13 @@
 }
 
 @media (max-width: 760px) {
-  .feat { display: block; margin-bottom: var(--space-l); }
-  .feat__visual { width: calc(88% + var(--pad)); margin-bottom: 1.5rem; }
+  .feat {
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: clamp(4.5rem, 14vh, 7rem);
+  }
+  .feat + .feat { padding-top: clamp(3.25rem, 10vh, 5.5rem); }
+  .feat__visual { width: calc(88% + var(--pad)); margin-bottom: 1.75rem; }
   .feat--left .feat__visual,
   .feat--wide .feat__visual { margin-left: calc(-1 * var(--pad)); }
   .feat--right .feat__visual { margin-left: auto; margin-right: calc(-1 * var(--pad)); }
@@ -1049,9 +1054,9 @@
 
 /* ───────── archived pricy — 2018 python terminal ───────── */
 .archive {
-  margin-top: var(--space-m);
-  margin-bottom: var(--space-l);
-  padding-top: 1.25rem;
+  margin-top: clamp(2rem, 6vh, 4rem);
+  margin-bottom: clamp(5rem, 14vh, 9rem);
+  padding-top: clamp(2.5rem, 8vh, 4.5rem);
   border-top: 1px dashed var(--ink-3);
 }
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export function useTitle(title) {
   useEffect(() => {
-    document.title = title ? `${title} — arusha.sh` : 'Arusha Shahi'
+    document.title = title ? `${title} — Arusha Shahi` : 'Arusha Shahi — I build things'
   }, [title])
 }
 
